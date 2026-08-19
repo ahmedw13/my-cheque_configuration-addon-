@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_pdc_cheque_design_tree" model="ir.ui.view">
+        <field name="name">pdc.cheque.design.tree</field>
+        <field name="model">pdc.cheque.design</field>
+        <field name="arch" type="xml">
+            <tree string="Cheque Designs">
+                <field name="bank_name"/>
+                <field name="bank_code"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_pdc_cheque_design_form" model="ir.ui.view">
+        <field name="name">pdc.cheque.design.form</field>
+        <field name="model">pdc.cheque.design</field>
+        <field name="arch" type="xml">
+            <form string="Cheque Design">
+                <sheet>
+                    <group string="Bank Information">
+                        <group>
+                            <field name="bank_name"/>
+                            <field name="bank_code"/>
+                        </group>
+                    </group>
+                    
+                    <group string="Date">
+                        <group>
+                            <field name="date_top"/>
+                            <field name="date_right"/>
+                            <field name="date_width"/>
+                        </group>
+
+                        <group>
+                            <field name="date_font_size"/>
+                            <field name="date_letter_spacing"/>
+                            <field name="date_courier"/>
+                            <field name="date_bold"/>
+                        </group>
+                    </group>
+
+                    <group string="Name">
+                        <group>
+                            <field name="name_top"/>
+                            <field name="name_right"/>
+                            <field name="name_width"/>
+                        </group>
+
+                        <group>
+                            <field name="name_font_size"/>
+                            <field name="name_letter_spacing"/>
+                            <field name="name_bold"/>
+                        </group>
+                    </group>
+
+                    <group string="Amount Number">
+                        <group>
+                            <field name="amount_num_top"/>
+                            <field name="amount_num_right"/>
+                            <field name="amount_num_width"/>
+                        </group>
+
+                        <group>
+                            <field name="amount_num_font_size"/>
+                            <field name="amount_num_letter_spacing"/>
+                            <field name="amount_num_bold"/>
+                        </group>
+                    </group>
+
+                    <group string="Amount Word">
+                        <group>
+                            <field name="amount_word_top"/>
+                            <field name="amount_word_right"/>
+                            <field name="amount_word_width"/>
+                        </group>
+
+                        <group>
+                            <field name="amount_word_font_size"/>
+                            <field name="amount_word_letter_spacing"/>
+                            <field name="amount_word_center"/>
+                            <field name="amount_word_line_height"/>
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_pdc_cheque_design" model="ir.actions.act_window">
+        <field name="name">Cheque Designs</field>
+        <field name="res_model">pdc.cheque.design</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="menu_pdc_cheque_design"
+              name="Cheque Designs"
+              action="action_pdc_cheque_design"
+              parent="account.menu_finance"
+              sequence="31"/>
+
+</odoo>

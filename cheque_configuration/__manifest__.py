@@ -17,6 +17,7 @@
         'wizard/pdc_payment_wizard.xml',
         'views/account_inherit.xml',
         'views/cheque_format_views.xml',
+        'views/cheque_design_views.xml',
         'wizard/pdc_inhe_views.xml',
         'Reports/report_bank_cheque.xml',
     ],
