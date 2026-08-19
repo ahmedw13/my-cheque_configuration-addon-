@@ -1,0 +1,69 @@
+<odoo>
+    <data>
+
+        <record id="bank_reference_form" model="ir.ui.view">
+            <field name="name">bank.reference.form</field>
+            <field name="model">bank.reference</field>
+            <field name="arch" type="xml">
+                <form string="Bank Reference">
+                    <header>
+                        <button name="create_seq_lines"
+                                string="Confirm"
+                                class="oe_highlight"
+                                type="object"
+                                invisible="state != 'draft'"/>
+                        <field name="state"
+                               widget="statusbar"
+                               statusbar_visible="draft,confirmed"/>
+                    </header>
+
+                    <sheet>
+                        <group col="4">
+                            <field name="name"/>
+                            <field name="bank"/>
+                            <field name="cheque_paper_num"
+                                   readonly="state == 'confirmed'"/>
+                            <!-- <field name="last_so_seq" readonly="1"/> -->
+                        </group>
+
+                        <notebook>
+                            <page string="">
+                                <field name="sequence" readonly="1">
+                                    <list>
+                                        <field name="seq"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="bank_reference_tree" model="ir.ui.view">
+            <field name="name">bank.reference.tree</field>
+            <field name="model">bank.reference</field>
+            <field name="arch" type="xml">
+                <list string="Bank Reference">
+                    <field name="name"/>
+                    <field name="bank"/>
+                    <field name="cheque_paper_num"/>
+                    <field name="start_seq"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="bank_reference_menu_action" model="ir.actions.act_window">
+            <field name="name">Bank Reference</field>
+            <field name="res_model">bank.reference</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem id="menu_bank_reference_cheque"
+                  name="Bank Reference"
+                  parent="account.menu_finance"
+                  sequence="40"
+                  action="bank_reference_menu_action"/>
+
+    </data>
+</odoo>

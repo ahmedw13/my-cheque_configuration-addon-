@@ -1,0 +1,30 @@
+# Copyright (C) Softhealer Technologies.
+{
+    "name": "Cheque Configuration",
+    'author': 'Karim Abd El-Aziz, Ahmed waleed , Abdelrahman Khaled',
+    'company': 'Takamol Information System',
+    "website": "https://www.takamol.net/",
+    'license': 'AGPL-3',
+    'sequence': -100,
+    "category": "Invoicing",
+    "summary": "",
+    "description": """""",
+    "version": "17.0.1.0.0",
+    "depends": ["sh_pdc", 'account',],
+    "data": [
+        'security/ir.model.access.csv',
+        'data/cheque_styles.xml',
+        'wizard/pdc_payment_wizard.xml',
+        'views/account_inherit.xml',
+        'views/cheque_format_views.xml',
+        'wizard/pdc_inhe_views.xml',
+        'Reports/report_bank_cheque.xml',
+    ],
+
+    "images": ['static/description/icon1.png', ],
+    "application": True,
+    "auto_install": False,
+    "installable": True,
+    "price": 40,
+    "currency": "EUR",
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pdc_form_inherit" model="ir.ui.view">
+        <field name="name">Pdc form Inherit</field>
+        <field name="model">pdc.wizard</field>
+        <field name="inherit_id" ref="sh_pdc.sh_pdc_payment_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reference']" position="after">
+                <field name="bank_reference"/>
+            </xpath>
+            <xpath expr="//field[@name='bank_reference']" position="after">
+                <field name="cheque_style_id" invisible="1"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Cheque Format" name="cheque_design" invisible="1">
+                    <group>
+                        <group string="Style Preview">
+                            <field name="main_style" readonly="1" force_save="1"/>
+                            <field name="date_style" readonly="1" force_save="1"/>
+                            <field name="name_style" readonly="1" force_save="1"/>
+                            <field name="amount_num_style" readonly="1" force_save="1"/>
+                            <field name="amount_word_style" readonly="1" force_save="1"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
+
+
+
+

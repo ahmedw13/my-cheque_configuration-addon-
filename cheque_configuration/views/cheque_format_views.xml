@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pdc_cheque_style_tree" model="ir.ui.view">
+        <field name="name">pdc.cheque.style.tree</field>
+        <field name="model">pdc.cheque.style</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="bank_code"/>
+                <field name="name_style"/>
+                <field name="date_style"/>
+                <field name="amount_num_style"/>
+                <field name="amount_word_style"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_pdc_cheque_style_form" model="ir.ui.view">
+        <field name="name">pdc.cheque.style.form</field>
+        <field name="model">pdc.cheque.style</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Basic Info">
+                            <field name="bank_code"/>
+                            <field name="bank_reference"/>
+                        </group>
+
+                        <group string="CSS Styles (Edit positions here)">
+                            <field name="main_style" placeholder="position: relative; text-align: center; width: 100%; height: 9cm;"/>
+                            <field name="date_style" placeholder="position: absolute; right: 10px; top: 25px; width: 210px; font-size: 20px; font-family: Courier New, Courier, monospace; letter-spacing: 18px;"/>
+                            <field name="name_style" placeholder="position: absolute; right: 162px; top: 103px; font-size: 16px;"/>
+                            <field name="amount_num_style" placeholder="position: absolute; right: 25px; top: 156px; font-size: 16px; width: 140px;"/>
+                            <field name="amount_word_style" placeholder="position: absolute; right: 95px; top: 141px; text-align: center; width: 500px; font-size: 15px; line-height: 1.4;"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_pdc_cheque_style" model="ir.actions.act_window">
+        <field name="name">Cheque Styles</field>
+        <field name="res_model">pdc.cheque.style</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_pdc_cheque_style"
+              name="Cheque Format"
+              action="action_pdc_cheque_style"
+              parent="account.menu_finance"
+              sequence="30"/>
+
+<!--    <record id="action_print_cheque_dynamic" model="ir.actions.report">-->
+<!--        <field name="name">Dynamic Cheque</field>-->
+<!--        <field name="model">sh.pdc.payment</field>-->
+<!--        <field name="report_type">qweb-pdf</field>-->
+<!--        <field name="report_name">cheque_format.report_bank_cheque_custom</field>-->
+<!--        <field name="report_file">cheque_format.report_bank_cheque_custom</field>-->
+<!--        <field name="binding_type">report</field>-->
+<!--        <field name="binding_model_id" search="[('model', '=', 'sh.pdc.payment')]" model="ir.model"/>-->
+<!--    </record>-->
+</odoo>

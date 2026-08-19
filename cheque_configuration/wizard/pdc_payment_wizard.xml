@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- PDC Form Wizard -->
+    <record id="sh_pdc_inherit_payment_form_view" model="ir.ui.view">
+        <field name="name">sh.pdc.wizard</field>
+        <field name="model">pdc.wizard</field>
+        <field name="inherit_id" ref="sh_pdc.sh_pdc_payment_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='endorsment_partner_id']" position="after">
+                <field name="display_date"/>
+                <field name="close_date" />
+                <field name="pay_type"/>
+                <field name="close_pay_name"/>
+            </xpath>    
+        </field>
+    </record>
+</odoo>

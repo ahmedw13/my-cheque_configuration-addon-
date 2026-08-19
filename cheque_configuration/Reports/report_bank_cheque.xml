@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_bank_cheque">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs.filtered(lambda doc: doc.payment_type == 'send_money')" t-as="doc">
+                <t t-set="style_rec" t-value="doc.cheque_style_id"/>
+                <div class="page" style="width: 100%; font-family: 'DejaVu Sans', sans-serif;">
+                    <div t-att-style="style_rec.main_style or 'position: relative; height: 9cm;'">
+                        <div t-att-style="style_rec.date_style or ''">
+                            <t t-if="doc.display_date">
+                                <t t-if="style_rec and 'Courier' in (style_rec.date_style or '')">
+                                    <span t-out="doc.get_boxed_date()"/>
+                                </t>
+                                <t t-else="">
+                                    <span t-field="doc.payment_date"
+                                          t-options='{"widget": "date", "format": "dd/MM/yyyy"}'/>
+                                </t>
+                            </t>
+                        </div>
+                        <div t-att-style="style_rec.name_style or ''">
+                            <span t-out="doc.display_name"/>
+                        </div>
+                        <div t-att-style="style_rec.amount_word_style or ''">
+                            <span t-out="doc.num2words(doc.payment_amount, 'ar_EG', 'جنيها', 'قرشا', 'و', 'مصريا لا غير')"/>
+                        </div>
+                        <div t-att-style="style_rec.amount_num_style or ''">#
+                            <span t-out="'{:,.2f}'.format(doc.payment_amount)"/>
+                            #
+                        </div>
+                    </div>
+                </div>
+                <p style="page-break-after:always"></p>
+            </t>
+        </t>
+    </template>
+
+    <record id="paperformat_bank_cheque" model="report.paperformat">
+        <field name="name">bank_cheque</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_width">76</field>
+        <field name="page_height">165</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">0.1</field>
+        <field name="margin_bottom">0.1</field>
+        <field name="margin_left">0.1</field>
+        <field name="margin_right">0.1</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">45</field>
+        <field name="dpi">80</field>
+    </record>
+
+    <record id="action_report_bank_cheque" model="ir.actions.report">
+        <field name="name">Bank Cheque</field>
+        <field name="model">pdc.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">cheque_configuration.report_bank_cheque</field>
+        <field name="report_file">cheque_configuration.report_bank_cheque</field>
+        <field name="binding_model_id" ref="cheque_configuration.model_pdc_wizard"/>
+        <field name="paperformat_id" ref="cheque_configuration.paperformat_bank_cheque"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
+
+
