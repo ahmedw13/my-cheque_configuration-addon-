@@ -4,7 +4,7 @@
         <record id="style_masr" model="pdc.cheque.style">
             <field name="bank_code">MASR</field>
 <!--            <field name="bank_reference">Banque Misr</field>-->
-            <field name="main_style">position: relative; text-align: center; width: 100%; height: 7.6cm;</field>
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
             <field name="date_style">position: absolute; right: 10px; top: 25px; width: 210px; font-size: 20px; letter-spacing: 8px;</field>
             <field name="name_style">position: absolute; right: 162px; top: 101px; font-size: 16px;</field>
             <field name="amount_num_style">position: absolute; right: 10px; top: 163px; font-size: 16px; width: 140px;</field>
@@ -14,17 +14,17 @@
         <record id="style_wafa" model="pdc.cheque.style">
             <field name="bank_code">WAFA</field>
 <!--            <field name="bank_reference">Attijariwafa Bank</field>-->
-            <field name="main_style">position: relative; text-align: center; width: 100%; height: 7.6cm;</field>
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
             <field name="date_style">position: absolute; left: 615px ; top: 28px; width: 300px; font-family: 'Courier New', Courier, monospace; font-size: 18px; letter-spacing: 9px; font-weight: bold;</field>
             <field name="name_style">position: absolute; right: 192px; top: 115px; font-size: 16px;</field>
             <field name="amount_num_style">position: absolute; right: 25px; top: 186px; font-size: 16px; width: 140px;</field>
-            <field name="amount_word_style">position: absolute; right: 148px; top: 161px; text-align: center; width: 500px; font-size: 15px; line-height: 1.4;-</field>
+            <field name="amount_word_style">position: absolute; right: 148px; top: 161px; text-align: center; width: 500px; font-size: 15px; line-height: 1.4;</field>
         </record>
 
         <record id="style_adib_fixed" model="pdc.cheque.style">
             <field name="bank_code">ADIB</field>
 <!--            <field name="bank_reference">Abu Dhabi Islamic Bank</field>-->
-            <field name="main_style">position: relative; text-align: center; width: 100%; height: 7.6cm;</field>
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
             <field name="date_style">position: absolute; left: 520px ; top: 32px; width: 270px; font-family: 'Courier New', Courier, monospace; font-size: 15px; letter-spacing: 5px !important; font-weight: bold;</field>
             <field name="name_style">position: absolute; right: 172px; top: 102px; font-size: 16px;</field>
             <field name="amount_num_style">position: absolute; right: 10px; top: 164px; font-size: 16px; width: 140px;</field>
@@ -34,7 +34,7 @@
         <record id="style_nbk" model="pdc.cheque.style">
             <field name="bank_code">NBK</field>
 <!--            <field name="bank_reference">National Bank of Kuwait</field>-->
-            <field name="main_style">position: relative; text-align: center; width: 100%; height: 7.6cm;</field>
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
             <field name="date_style">position: absolute; left: 505px ; top: 30px; width: 270px; font-family: 'Courier New', Courier, monospace; font-size: 15px; letter-spacing: 5px !important; font-weight: bold;</field>
             <field name="name_style">position: absolute; right: 173px; top: 96px; font-size: 16px;</field>
             <field name="amount_num_style">position: absolute; right: 10px; top: 149px; font-size: 16px; width: 140px;</field>
@@ -44,8 +44,8 @@
         <record id="style_cib" model="pdc.cheque.style">
             <field name="bank_code">CIB</field>
 <!--            <field name="bank_reference">Commercial International Bank</field>-->
-            <field name="main_style">position: relative; text-align: center; width: 100%; height: 7.6cm;</field>
-            <field name="date_style">position: absolute; right: 10px; top: 52px; width: 210px; font-size: 20px; letter-spacing: 8px;</field>
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
+            <field name="date_style">position: absolute; right: 0px; top: 52px; width: 210px; font-size: 20px; letter-spacing: 8px;</field>
             <field name="name_style">position: absolute; right: 210px; top: 102px; font-size: 16px;</field>
             <field name="amount_num_style">position: absolute; right: 34px; top: 163px; font-size: 16px; width: 140px;</field>
             <field name="amount_word_style">position: absolute; right: 165px; top: 155px; text-align: center; width: 500px; font-size: 15px; line-height: 1.4;</field>
@@ -54,11 +54,51 @@
         <record id="style_ahly" model="pdc.cheque.style">
             <field name="bank_code">AHLY</field>
 <!--            <field name="bank_reference">National Bank of Egypt</field>-->
-            <field name="main_style">position: relative; text-align: center; width: 100%; height: 7.6cm;</field>
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
             <field name="date_style">position: absolute; right: 25px; top: 77px; width: 100px; font-size: 13px; letter-spacing: 1px; font-weight: bold;</field>
             <field name="name_style">position: absolute; right: 165px; top: 110px; font-size: 16px;</field>
             <field name="amount_num_style">position: absolute; right: 10px; top: 174px; font-size: 16px; width: 140px;</field>
             <field name="amount_word_style">position: absolute; right: 115px; top: 148px; text-align: center; width: 500px; font-size: 15px; line-height: 1.4;</field>
+        </record>
+
+        <record id="style_hsbc" model="pdc.cheque.style">
+            <field name="bank_code">HSBC</field>
+<!--            <field name="bank_reference">National Bank of Egypt</field>-->
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
+            <field name="date_style">position: absolute; left: 505px ; top: 30px; width: 270px; font-family: 'Courier New', Courier, monospace; font-size: 15px; letter-spacing: 5px !important; font-weight: bold;</field>
+            <field name="name_style">position: absolute; right: 173px; top: 96px; font-size: 16px;</field>
+            <field name="amount_num_style">position: absolute; right: 10px; top: 149px; font-size: 16px; width: 140px;</field>
+            <field name="amount_word_style">position: absolute; right: 115px; top: 131px; text-align: center; width: 500px; font-size: 15px; line-height: 1.4;</field>
+        </record>
+
+        <record id="style_hsbc2" model="pdc.cheque.style">
+            <field name="bank_code">HSBCdollar</field>
+<!--            <field name="bank_reference">National Bank of Egypt</field>-->
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
+            <field name="date_style">position: absolute; right: 30px; top: 52px; width: 210px; font-size: 20px; letter-spacing: 8px;</field>
+            <field name="name_style">position: absolute; right: 172px; top: 130px; font-size: 16px;</field>
+            <field name="amount_num_style">position: absolute; right: 60px; top: 180px; font-size: 16px; width: 140px;</field>
+            <field name="amount_word_style">position: absolute; right: 130px; top: 166px; text-align: center; width: 500px; font-size: 15px; line-height: 1.4;</field>
+        </record>
+
+        <record id="style_african" model="pdc.cheque.style">
+            <field name="bank_code">AFRICAN</field>
+<!--            <field name="bank_reference">National Bank of Egypt</field>-->
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
+            <field name="date_style">position: absolute; right: 0px; top: 27px; width: 210px; font-size: 20px; letter-spacing: 8px;</field>
+            <field name="name_style">position: absolute; right: 172px; top: 98px; font-size: 16px;</field>
+            <field name="amount_num_style">position: absolute; right: 60px; top: 183px; font-size: 16px; width: 140px;</field>
+            <field name="amount_word_style">position: absolute; right: 130px; top: 140px; text-align: center; width: 500px; font-size: 15px; line-height: 1.4;</field>
+        </record>
+
+        <record id="style_saib" model="pdc.cheque.style">
+            <field name="bank_code">SAIB</field>
+<!--            <field name="bank_reference">National Bank of Egypt</field>-->
+            <field name="main_style">position: relative; text-align: center; width: 100%; height: 8.2cm;</field>
+            <field name="date_style">position: absolute; right: 6px; top: 21px; width: 210px; font-size: 20px; letter-spacing: 8px;</field>
+            <field name="name_style">position: absolute; right: 172px; top: 81px; font-size: 16px;</field>
+            <field name="amount_num_style">position: absolute; right: 60px; top: 153px; font-size: 16px; width: 140px;</field>
+            <field name="amount_word_style">position: absolute; right: 130px; top: 123px; text-align: center; width: 500px; font-size: 15px; line-height: 1.4;</field>
         </record>
 
     </data>

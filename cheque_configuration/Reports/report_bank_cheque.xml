@@ -36,19 +36,20 @@
 
     <record id="paperformat_bank_cheque" model="report.paperformat">
         <field name="name">bank_cheque</field>
-        <field name="default" eval="True"/>
+        <field name="default" eval="False"/>
         <field name="format">custom</field>
-        <field name="page_width">76</field>
-        <field name="page_height">165</field>
+        <field name="page_width">82</field>
+        <field name="page_height">173</field>
         <field name="orientation">Landscape</field>
-        <field name="margin_top">0.1</field>
-        <field name="margin_bottom">0.1</field>
-        <field name="margin_left">0.1</field>
-        <field name="margin_right">0.1</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
         <field name="header_line" eval="False"/>
-        <field name="header_spacing">45</field>
+        <field name="header_spacing">0</field>
         <field name="dpi">80</field>
     </record>
+
 
     <record id="action_report_bank_cheque" model="ir.actions.report">
         <field name="name">Bank Cheque</field>
